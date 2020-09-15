@@ -13,16 +13,8 @@ const Home = (props) => {
     <Fragment>
       <div className="container">
         <div className="row">
-          <div className="col-4">
-            <Card />
-            <CardPanel />
-
-          </div>
-          <div className="col-4">
-            <ImageCard />
-          </div>
-          <div className="col-4">
-            <RevealCard />
+          <div className="col-12">
+            <h1>dusklight</h1>
           </div>
         </div>
       </div>
