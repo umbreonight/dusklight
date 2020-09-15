@@ -1,0 +1,124 @@
+$card-padding: 24px !default;
+$card-bg-color: #efefef !default;
+$card-link-color: $accent-color !default;
+$card-link-color-light: lighten($card-link-color, 20%) !default;
+$card-title-font-size: 1.5rem;
+$card-title-font-size-small: 1.25rem;
+
+.card-panel {
+  @extend .z-depth-1;
+  background-color: $card-bg-color;
+  border-radius: $base-border-radius-small;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  padding: $card-padding;
+  transition: box-shadow 0.25s;
+}
+
+.card {
+  @extend .z-depth-1;
+  background-color: $card-bg-color;
+  border-radius: $base-border-radius;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.25s;
+
+  .card-title {
+    display: flex;
+    font-size: $card-title-font-size-small;
+    font-weight: 300;
+
+    @include sm() {
+      font-size: $card-title-font-size;
+    }
+  }
+
+  .card-image {
+    position: relative;
+    height: 200px;
+
+    // Image background for content
+    img {
+      display: block;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .card-title {
+      color: $card-bg-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      padding: $card-padding;
+    }
+  }
+
+  .card-content {
+    padding: $card-padding;
+
+    p {
+      margin: 0;
+    }
+
+    .card-title {
+      display: flex;
+      line-height: 2rem;
+      margin-bottom: 8px;
+
+      i {
+        line-height: 2rem;
+      cursor: pointer;
+
+      }
+    }
+  }
+
+  .card-actions {
+    background-color: inherit; // Use inherit to inherit color classes
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    position: relative;
+    padding: 16px $card-padding;
+
+    a:not(.btn):not(.btn-large):not(.btn-floating) {
+      color: $card-link-color;
+      margin-right: $card-padding;
+      transition: color 0.3s ease;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $card-link-color-light;
+      }
+    }
+  }
+
+  .card-reveal {
+    padding: $card-padding;
+    position: absolute;
+    background-color: $card-bg-color;
+    width: 100%;
+    overflow-y: auto;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    z-index: 3;
+    opacity: 0;
+    transition: all .25s ease-in-out;
+
+    .card-title {
+      cursor: pointer;
+      display: flex;
+    }
+
+    &.is-shown {
+      transform: translateY(-100%);
+      opacity: 1;
+    }
+  }
+}

@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+import { Loading, Card, ImageCard, RevealCard } from "@components";
+import { CardPanel } from "../../components";
 
 const Home = (props) => {
   const { children, loading = false } = props;
@@ -9,7 +11,21 @@ const Home = (props) => {
 
   return (
     <Fragment>
-      <div className=""></div>
+      <div className="container">
+        <div className="row">
+          <div className="col-4">
+            <Card />
+            <CardPanel />
+
+          </div>
+          <div className="col-4">
+            <ImageCard />
+          </div>
+          <div className="col-4">
+            <RevealCard />
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 };
