@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kingturo/dusklight.git"
+    "url": "git+https://github.com/umbreonight/dusklight.git"
   },
   "author": "Darren van Reenen (darrenvanreenen@live.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kingturo/dusklight/issues"
+    "url": "https://github.com/umbreonight/dusklight/issues"
   },
-  "homepage": "https://github.com/kingturo/dusklight#readme",
+  "homepage": "https://github.com/umbreonight/dusklight#readme",
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
