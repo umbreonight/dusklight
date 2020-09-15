@@ -1,0 +1,18 @@
+.is-hidden {
+  display: none !important;
+}
+
+.is-invisible {
+  visibility: hidden !important;
+}
+
+.is-noted {
+  &:before {
+    color: $primary-color;
+    content: "*";
+  }
+}
+
+.is-invalid {
+  color: red;
+}

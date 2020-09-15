@@ -1,0 +1,125 @@
+$table-color: $secondary-color !default;
+$table-border-color: $border-color !default;
+$table-striped-color: $primary-color !default;
+$table-striped-background-color: $gray-300 !default;
+
+// Tables
+table,
+th,
+td {
+    border: none;
+}
+
+th {
+    font-weight: normal;
+    user-select: none;
+    font-weight: bold;
+}
+
+td {
+  ul {
+    margin: 0;
+  }
+}
+
+table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: .8rem;
+
+    &.striped {
+        tr {
+            border-bottom: none;
+        }
+
+        >tbody {
+            >tr:nth-child(odd) {
+                background-color: $table-striped-background-color;
+            }
+
+            >tr>td {
+                border-radius: 0;
+            }
+        }
+    }
+
+    &.highlight>tbody>tr {
+        transition: background-color .25s ease;
+        border-bottom: none;
+
+        &:hover {
+            background-color: $table-striped-background-color;
+        }
+    }
+
+    &.text-highlight>tbody>tr {
+        transition: color .25s ease;
+        border-bottom: none;
+
+        &:hover {
+            td {
+              color: $table-striped-color;
+            }
+        }
+    }
+
+    &.centered {
+
+        thead tr th,
+        tbody tr td {
+            text-align: center;
+        }
+    }
+}
+
+tr {
+    border-bottom: 1px solid $table-border-color;
+
+    // td:first-child {
+    //   width: 450px;
+    // }
+}
+
+td,
+th {
+  min-width: 50px;
+    padding: 1rem .5rem;
+    display: table-cell;
+    text-align: left;
+    vertical-align: baseline;
+    border-radius: 2px;
+    color: $table-color;
+    line-height: 120%;
+}
+
+td button {
+  margin: 0 !important;
+
+  .icon {
+    line-height: 1;
+  }
+}
+
+th.ascending,
+th.descending {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 16px;
+  }
+}
+th.ascending::after {
+  content: 'keyboard_arrow_up';
+  font-family: 'Material Icons';
+  font-size: 18px;
+}
+
+th.descending::after {
+  content: 'keyboard_arrow_down';
+  font-family: 'Material Icons';
+  font-size: 18px;
+}

@@ -1,0 +1,12 @@
+.#{$prefix}loading {
+  height: 100vh;
+  position: relative;
+
+  .#{$prefix}loading-inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+}

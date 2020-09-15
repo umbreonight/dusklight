@@ -1,0 +1,59 @@
+$spacers: (
+  xs: .25rem,
+  sm: .5rem,
+  md: 1rem,
+  lg: 1.25rem,
+  xl: 1.5rem
+);
+
+@function spacing($keys...) {
+  $value: $spacers;
+
+  @each $key in $keys {
+    $value: map-get($value, $key);
+  }
+
+  @return $value;
+}
+
+$z-indexes: (
+  base: (
+    base: 10,
+    overlay: 90
+  ),
+  app-bars: (
+    bottom: 80,
+    top: 80
+  ),
+  navigation: (
+    header: 80,
+    footer: 80,
+    sidenav: 100
+  ),
+  slider: (
+    arrows: 40,
+    base: 30,
+    dots: 40
+  ),
+  component: (
+    card: 20,
+    dropdown: 30,
+    overlay: 40
+  ),
+  modal: (
+    background: 90,
+    body: 100
+  )
+);
+
+@function z-index($keys...) {
+  $value: $z-indexes;
+
+  @each $key in $keys {
+    $value: map-get($value, $key);
+  }
+
+  @return $value;
+}
+
+// z-index: z-index(sidebar, body);

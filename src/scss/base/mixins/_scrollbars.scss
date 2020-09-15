@@ -1,0 +1,43 @@
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 40%)) {
+
+  // For Google Chrome
+  ::-webkit-scrollbar {
+
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+@mixin no-scrollbars() {
+
+  // For Google Chrome
+  ::-webkit-scrollbar {
+
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+@mixin hide-scroll() {
+  & {
+    -ms-overflow-style: none;
+  }
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

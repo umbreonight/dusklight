@@ -1,0 +1,36 @@
+
+$themes: (
+  default: (
+    'primary': $skyblue,
+    'secondary': $onyx,
+    'accent': $orange
+  )
+);
+
+@function theme-color($key, $variant) {
+  $map: map-get($themes, $key);
+  @return map-get($map, $variant);
+}
+
+$primary-color: theme-color($theme, 'primary') !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+$secondary-color: theme-color($theme, 'secondary') !default;
+$accent-color: theme-color($theme, 'accent') !default;
+
+$info-color: $teal;
+$success-color: $green;
+$error-color: $red;
+
+$link-color: $primary-color;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "accent": $accent-color,
+  "success": $success-color,
+  "info": $info-color,
+  "error": $error-color,
+), $theme-colors);
+

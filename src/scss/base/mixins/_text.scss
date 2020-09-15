@@ -1,0 +1,24 @@
+@mixin text-columns($columns: 2) {
+    -webkit-column-count: $columns;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: $columns;
+    /* Firefox */
+    column-count: $columns;
+}
+
+@mixin line-clamp ($lines: 2) {
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  
+  @if ($lines == 0) {
+    -webkit-line-clamp: unset;
+  }
+}
+
+@mixin truncate () {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
