@@ -1,0 +1,201 @@
+/*
+  BUTTONS
+*/
+
+// Shared styles
+$button-border: none !default;
+$button-font-size: $base-font-size !default;
+$button-icon-font-size: 1.3rem !default;
+$button-height: 40px !default;
+$button-padding: 0 16px !default;
+$button-border-radius: 4px !default;
+
+// Disabled styles
+$button-disabled-background: #dfdfdf !default;
+$button-disabled-border: #dfdfdf !default;
+$button-disabled-color: #9f9f9f !default;
+
+// Default
+$button-default-background: $primary-color;
+$button-default-background-hover: darken($button-default-background, 5%) !default;
+$button-default-color: white;
+$button-default-border: none;
+
+// Outline buttons
+$button-outline-color: $primary-color !default;
+$button-outline-border: 1px solid $button-outline-color !default;
+$button-outline-color-hover: darken($button-outline-color, 5%) !default;
+$button-outline-disabled-color: $button-disabled-color !default;
+
+// Accent Buttons
+
+$button-accent-background: $gray-900;
+$button-accent-color: $accent-color;
+$button-accent-background-hover: darken($button-accent-background, 5%) !default;
+$button-accent-color-hover: $white !default;
+
+// Flat buttons
+$button-flat-color: $primary-color !default;
+$button-flat-color-hover: darken($button-flat-color, 5%) !default;
+$button-flat-disabled-color: $button-disabled-color !default;
+
+// Large buttons
+$button-large-font-size: 15px !default;
+$button-large-icon-font-size: 1.6rem !default;
+$button-large-height: $button-height * 1.5 !default;
+$button-round-large-size: 56px !default;
+
+// Small buttons
+$button-small-font-size: 12px !default;
+$button-small-icon-font-size: 1.2rem !default;
+$button-small-height: $button-height * 0.9 !default;
+$button-round-small-size: $button-height * 0.9 !default;
+$button-small-padding: 0 spacer(sm);
+
+// Fixed button
+$button-fixed-background: $accent-color !default;
+$button-fixed-background-hover: darken($button-fixed-background, 5%) !default;
+$button-fixed-color: $white !default;
+$button-fixed-size: 56px;
+$button-fixed-font-size: 24px;
+$button-fixed-padding: 16px;
+$button-fixed-gap: 0.75rem;
+$button-fixed-radius: 100%;
+
+$button-fixed-mini-size: 40px;
+$button-fixed-mini-padding: 8px;
+
+// Round buttons
+$button-round-background: $accent-color !default;
+$button-round-background-hover: darken($button-round-background, 5%) !default;
+$button-round-color: #fff !default;
+$button-round-size: 40px !default;
+$button-round-large-size: $button-round-size * 1.5 !default;
+$button-round-radius: 50% !default;
+
+%button-base {
+  -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
+  align-items: center;
+  background-color: inherit;
+  border-radius: $button-border-radius;
+  border: $button-border;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: $button-font-size;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: $button-height;
+  min-height: $button-height;
+  padding: $button-padding;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+
+  &.round {
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+
+    &.small {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  & .icon {
+    &.left {
+      order: -1;
+    }
+
+    &.right {
+      order: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Standard Button
+
+.button {
+  @extend %button-base;
+  background-color: $button-default-background;
+
+  &:hover {
+    background: $button-default-background-hover;
+  }
+
+  &:active {
+    background: darken($button-default-background-hover, 10%);
+  }
+
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $button-disabled-color !important;
+    background: $button-disabled-background !important;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.button {
+  &.accent {
+    @extend %button-base;
+    background-color: $button-accent-background;
+    color: $button-accent-color;
+
+    &:hover {
+      color: $button-accent-color-hover;
+      background-color: $button-accent-background-hover;
+    }
+
+    &:active {
+      color: $button-accent-color-hover;
+      background-color: darken($button-accent-background-hover, 10%);
+    }
+
+    &.is-disabled,
+    &[disabled],
+    &:disabled {
+      @include box-shadow(0);
+    }
+  }
+
+  &.outline {
+    @extend %button-base;
+    background-color: transparent;
+    color: $button-outline-color;
+    border: $button-outline-border;
+
+    &:hover {
+      background: transparent;
+      border-color: darken($button-outline-color, 5%);
+      color: darken($button-outline-color, 5%);
+    }
+
+    &:active {
+      border-color: darken($button-outline-color, 10%);
+      color: darken($button-outline-color, 10%);
+    }
+
+    &.is-disabled,
+    &[disabled],
+    &:disabled {
+      color: $button-disabled-color !important;
+      background: $button-disabled-background !important;
+      cursor: default;
+      pointer-events: none;
+      border: none;
+    }
+  }
+}

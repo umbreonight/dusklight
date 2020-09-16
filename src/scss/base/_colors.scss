@@ -1,0 +1,26 @@
+@each $color_name, $color_value in $theme-colors {
+  .background-#{$color_name} {
+    background-color: $color_value !important;
+  }
+  .text-#{$color_name} {
+    color: $color_value !important;
+  }
+  .border-#{$color_name} {
+    border: 1px solid $color_value !important;
+  }
+  .border-#{$color_name}--dashed {
+    border: 1px dashed $color_value !important;
+  }
+}
+
+.background-white {
+  background-color: white;
+}
+
+.text-light {
+  color: $white !important;
+}
+
+.text-dark {
+  color: $black !important;
+}

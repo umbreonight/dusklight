@@ -1,19 +1,25 @@
-import Loading from "./Loading";
-import ScrollToTop from "./ScrollToTop";
-import Footer from "./Footer";
+import Banner from "./Banner";
+import Button from "./Button";
 import Card from "./Card";
-import ImageCard from "./ImageCard";
-import RevealCard from "./RevealCard";
 import CardPanel from "./CardPanel";
+import Footer from "./Footer";
 import Icon from "./Icon";
+import ImageCard from "./ImageCard";
+import Loading from "./Loading";
+import RevealCard from "./RevealCard";
+import ScrollToTop from "./ScrollToTop";
+import ParallaxStars from "./ParallaxStars";
 
 export {
-  Loading,
-  Footer,
-  ScrollToTop,
+  Banner,
+  Button,
   Card,
-  ImageCard,
-  RevealCard,
   CardPanel,
+  Footer,
   Icon,
+  ImageCard,
+  Loading,
+  RevealCard,
+  ScrollToTop,
+  ParallaxStars
 };

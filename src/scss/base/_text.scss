@@ -1,0 +1,70 @@
+.truncate {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.font-body {
+  font-family: $font-family-base;
+}
+
+.font-heading {
+  font-family: $font-family-heading;
+}
+
+.font-heavy {
+    font-weight: bold;
+}
+
+.font-lighter {
+    font-weight: lighter;
+}
+
+.font-small-caps {
+    font-variant: small-caps;
+}
+
+.text-overline {
+    text-decoration: overline;
+}
+
+.text-line-through {
+    text-decoration: line-through;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-two-column {
+    @include text-columns(2);
+}
+
+.text-muted {
+    color: $gray-500;
+}

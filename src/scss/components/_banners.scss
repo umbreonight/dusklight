@@ -1,0 +1,73 @@
+.#{$prefix}banner {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: height 0.3s;
+  height: 300px;
+
+  padding: 3rem 2rem;
+
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  @include sm() {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 15;
+    }
+  }
+
+  .banner-content {
+    max-width: 30rem;
+    z-index: 20;
+
+    p {
+      color: white;
+    }
+  }
+
+  .banner-title {
+    font-size: $font-size-large;
+    font-family: $font-family-heading;
+    line-height: 130%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+  }
+
+  @include md() {
+    .banner-title {
+      font-size: $font-size-extra;
+    }
+  }
+}

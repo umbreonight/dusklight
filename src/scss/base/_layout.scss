@@ -1,0 +1,9 @@
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 5px;
+
+  .input, input {
+    margin: 0;
+  }
+}

@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import { Loading, Card, ImageCard, RevealCard } from "@components";
-import { CardPanel } from "../../components";
+import { Loading, Button, Banner, ParallaxStars } from "@components";
 
 const Home = (props) => {
-  const { children, loading = false } = props;
+  const { loading = false } = props;
 
   if (!!loading) {
     return <Loading />;
@@ -11,11 +10,11 @@ const Home = (props) => {
 
   return (
     <Fragment>
+      <ParallaxStars title="dusklight" />
+      <Banner title="dusklight" image="/static/images/dark-souls.jpg" />
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1>dusklight</h1>
-            <hr></hr>
           </div>
         </div>
       </div>

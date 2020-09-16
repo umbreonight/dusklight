@@ -4,9 +4,17 @@
 
 // Base styling
 @import "global";
-@import "animations";
-@import "grid";
-@import "states";
 @import "typography";
 @import "icons";
 @import "tables";
+
+@import "animations";
+@import "colors";
+@import "text";
+
+@import "grid";
+@import "flex";
+@import "layout";
+@import "spacers";
+
+@import "states";

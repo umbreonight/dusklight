@@ -1,0 +1,29 @@
+@each $identifier, $size in $spacers {
+  .margin-#{$identifier} {
+    margin: $size !important;
+  }
+
+  .margin-vertical-#{$identifier} {
+    margin-top: $size !important;
+    margin-bottom: $size !important;
+  }
+
+  .margin-hozizontal-#{$identifier} {
+    margin-left: $size !important;
+    margin-right: $size !important;
+  }
+
+  .padding-#{$identifier} {
+    padding: $size !important;
+  }
+
+  .padding-vertical-#{$identifier} {
+    padding-top: $size !important;
+    padding-bottom: $size !important;
+  }
+
+  .padding-hozizontal-#{$identifier} {
+    padding-left: $size !important;
+    padding-right: $size !important;
+  }
+}
