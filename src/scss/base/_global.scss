@@ -9,7 +9,7 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   color: $primary-color;
-  @include scrollbars(5px, $primary-color);
+  @include scrollbars(1px, $primary-color);
 }
 
 body {

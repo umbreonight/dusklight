@@ -6,9 +6,12 @@ import Footer from "./Footer";
 import Icon from "./Icon";
 import ImageCard from "./ImageCard";
 import Loading from "./Loading";
+import Media from "./Media";
+import ParallaxStars from "./ParallaxStars";
 import RevealCard from "./RevealCard";
 import ScrollToTop from "./ScrollToTop";
-import ParallaxStars from "./ParallaxStars";
+import UserProfile from "./UserProfile";
+import SlickSlider from "./SlickSlider";
 
 export {
   Banner,
@@ -19,7 +22,10 @@ export {
   Icon,
   ImageCard,
   Loading,
+  Media,
+  ParallaxStars,
   RevealCard,
   ScrollToTop,
-  ParallaxStars
+  UserProfile,
+  SlickSlider
 };

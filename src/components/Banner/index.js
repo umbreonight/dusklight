@@ -9,7 +9,7 @@ const Banner = props => {
       <div className="banner-image">
         <img className="responsive" src={image} alt=""></img>
       </div>
-      <div className="banner-content">
+      <div className="banner-content container">
         <h1 className="banner-title">{title}</h1>
         {body && <p className="feature">{body}</p>}
       </div>

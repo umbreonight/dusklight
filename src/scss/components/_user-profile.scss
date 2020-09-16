@@ -1,0 +1,56 @@
+.user-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem 0;
+  .user {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    .user-image {
+      height: 45px;
+      width: 45px;
+      border-radius: 100%;
+      object-fit: cover;
+      object-position: center;
+      margin-right: 1rem;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user-title {
+      font-size: 13px;
+      line-height: 23px;
+
+      text-transform: uppercase;
+
+      font-family: $font-family-heading;
+    }
+
+    .user-subtitle {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &.large {
+    .user-image {
+      width: 80px;
+      height: 80px;
+    }
+
+    .user-title {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    .user-subtitle {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

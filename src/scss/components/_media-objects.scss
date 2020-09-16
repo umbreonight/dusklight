@@ -1,0 +1,58 @@
+.media {
+  display: grid;
+  grid-column-gap: $grid-gutter;
+  grid-template-columns: 65px 1fr;
+  grid-template-rows: 65px 1fr;
+  align-items: start;
+
+  &.flipped {
+    grid-template-columns: 1fr 65px;
+    grid-auto-flow: column;
+
+    .media-asset {
+      grid-column-start: 2;
+    }
+
+    &.large {
+      grid-template-columns: 1fr 150px;
+    }
+  }
+
+  &.large {
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 150px 1fr;
+  }
+
+  .media {
+    margin: 1.25rem 0;
+  }
+}
+
+.media-asset {
+  /* set span to (at a minimum) the max # of
+        grid items to appear next to the img */
+  grid-column-start: 1;
+
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+}
+
+.media-content {
+  grid-row: span 2;
+
+  * {
+    margin: 0;
+  }
+
+  .media-heading {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
