@@ -15,6 +15,7 @@ const Home = (props) => {
         <div className="row">
           <div className="col-12">
             <h1>dusklight</h1>
+            <hr></hr>
           </div>
         </div>
       </div>
