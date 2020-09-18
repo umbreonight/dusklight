@@ -1,0 +1,25 @@
+.section-title {
+  font-size: 24px;
+  font-family: $font-family-secondary;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: .02em;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  min-height: 40px;
+  line-height: 36px;
+
+  & + hr {
+    margin: 0;
+  }
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  & .icon {
+    margin-right: 1rem;
+    @extend .icon-36;
+  }
+}

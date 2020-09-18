@@ -1,0 +1,17 @@
+.network-status {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: z-index(network, strip);
+
+    &.online {
+        background-color: $green;
+    }
+
+    &.offline {
+        background-color: $red;
+    }
+}

@@ -23,6 +23,10 @@ $card-title-font-size-small: 1.25rem;
   position: relative;
   transition: box-shadow 0.25s;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   .card-title {
     display: flex;
     font-size: $card-title-font-size-small;
@@ -35,7 +39,6 @@ $card-title-font-size-small: 1.25rem;
 
   .card-image {
     position: relative;
-    height: 200px;
 
     // Image background for content
     img {
@@ -48,6 +51,12 @@ $card-title-font-size-small: 1.25rem;
       height: 100%;
       width: 100%;
       object-fit: cover;
+      min-height: 200px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
     }
 
     .card-title {

@@ -8,14 +8,6 @@ const Footer = (props) => {
         <a href="/">Home</a>
         <a href="/library">Library</a>
         <a href="/workbench">Workbench</a>
-        <button
-          type="button"
-          href="/workbench"
-          className="button"
-          onClick={openSidenav}
-        >
-          Workbench
-        </button>
       </div>
       <div className="footer-copyright">© Copyright 2020</div>
     </footer>

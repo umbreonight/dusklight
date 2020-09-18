@@ -98,10 +98,13 @@ $button-round-radius: 50% !default;
   user-select: none;
   vertical-align: middle;
 
+  &.small {
+    font-size: $button-small-font-size;
+    height: $button-small-height;
+  }
+
   &.round {
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
+    border-radius: $button-height / 2;
 
     &.small {
       height: 40px;

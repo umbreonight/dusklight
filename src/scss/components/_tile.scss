@@ -1,0 +1,17 @@
+.tile {
+    height: 120px;
+    background-color: $accent-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    .tile-label {
+        margin-top: .5rem;
+        font-size: 14px;
+        letter-spacing: .03rem;
+        text-transform: uppercase;
+        color: white;
+    }
+}

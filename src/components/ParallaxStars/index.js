@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 
-const ParallaxStars = ({title}) => {
+const ParallaxStars = ({title, fixed=false}) => {
   return (
     <Fragment>
       <div className="parallax-stars">
-        <div className="stars">
+        <div className={'stars' + (!!fixed && ' fixed')}>
           <div id="stars"></div>
           <div id="stars2"></div>
           <div id="stars3"></div>

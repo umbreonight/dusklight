@@ -1,0 +1,23 @@
+.collapsible {
+  margin: 1rem 0;
+  .collapsible-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    user-select: none;
+    font-weight: bolder;
+    min-height: 50px;
+  }
+  .collapsible-panel {
+    display: none;
+    padding: 1rem 0;
+  }
+
+  &.is-open {
+    .collapsible-panel {
+      display: block;
+    }
+  }
+}

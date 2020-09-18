@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 
   transition: height 0.3s;
   height: 300px;
@@ -17,6 +16,14 @@
   @include sm() {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  &.center {
+    text-align: center;
+  }
+  
+  &.flipped {
+    text-align: right;
   }
 
   .banner-image {

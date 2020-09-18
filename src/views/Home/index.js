@@ -1,5 +1,15 @@
 import React, { Fragment } from "react";
-import { Loading, Banner, Card, UserProfile, ParallaxStars } from "@components";
+import {
+  Loading,
+  Banner,
+  Card,
+  UserProfile,
+  ParallaxStars,
+  MediaCard,
+  Collapsible,
+  SectionTitle,
+  Button
+} from "@components";
 
 const Home = (props) => {
   const { loading = false } = props;
@@ -10,48 +20,45 @@ const Home = (props) => {
 
   return (
     <Fragment>
-      <ParallaxStars title="dusklight" />
+      <ParallaxStars title="dusklight" fixed/>
       <div className="container">
         <div className="row">
-          <div className="col-12 col-sm-6">
-            <Card title="Developer Homebase">
+          <div className="col-12 col-sm-8">
+            <SectionTitle title="Components" />
+            <div className="button-group">
+              <Button text="Button" />
+              <Button text="add" icon="add" className="round"/>
+            </div>
+          </div>
+          <div className="col-12 col-sm-4">
+            <Collapsible title="About">
+            <Card>
               <UserProfile
                 username="Darren van Reenen"
                 subtitle="Front End UI Developer"
                 image="/static/images/bloodborne.jpeg"
               />
-              <p>
-                Dusklight is my passion project and working hub. React
-                Components are built and tested here and will have websites
-                built with Dusklight, a <b>React Front End Component Library</b>
-              </p>
             </Card>
-          </div>
-          <div className="col-12 col-sm-6">
-            <Card title="React Components">
+            </Collapsible>
+            
+            <MediaCard video="/static/videos/godfall.mp4" title="Godfall">
               <p>
-                Inisi ipsum esse esse aliqua mollit id dolore. Deserunt aliqua
-                sunt eiusmod nisi esse est consectetur irure anim incididunt
-                Lorem elit ipsum. Nostrud adipisicing amet do excepteur
-                consectetur aliqua. Consectetur incididunt eiusmod sit do
-                ullamco incididunt reprehenderit pariatur.
+                Anim sit eiusmod ut ea quis consectetur non adipisicing
+                incididunt culpa dolor ex. Sunt sunt do deserunt eu laborum id.
+                Cupidatat dolor eu deserunt ad veniam.
               </p>
-            </Card>
-          </div>
-          <div className="col-12 col-sm-6">
-            <Card title="SCSS">
+            </MediaCard>
+            <MediaCard image="/static/images/dark-souls-3.jpg" title="Dark Souls">
               <p>
-                Inisi ipsum esse esse aliqua mollit id dolore. Deserunt aliqua
-                sunt eiusmod nisi esse est consectetur irure anim incididunt
-                Lorem elit ipsum. Nostrud adipisicing amet do excepteur
-                consectetur aliqua. Consectetur incididunt eiusmod sit do
-                ullamco incididunt reprehenderit pariatur.
+                Anim sit eiusmod ut ea quis consectetur non adipisicing
+                incididunt culpa dolor ex. Sunt sunt do deserunt eu laborum id.
+                Cupidatat dolor eu deserunt ad veniam. Esse eiusmod id fugiat
+                sit pariatur magna in Lorem proident sint.
               </p>
-            </Card>
+            </MediaCard>
           </div>
         </div>
       </div>
-      <Banner title="dusklight" image="/static/images/dark-souls.jpg" />
     </Fragment>
   );
 };

@@ -5,8 +5,8 @@ const Button = props => {
   const {type, className, onClick, alignment="left", text, icon, disabled=false} = props;
   return (
     <button type={type} className={"button " + (className ? className : "")} onClick={onClick} disabled={disabled}>
-      {text}
-      {icon && <Icon name={icon} className={alignment}/>}
+      {!!text && text}
+      {!!icon && <Icon name={icon} className={alignment}/>}
     </button>
   );
 };

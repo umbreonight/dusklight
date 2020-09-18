@@ -10,9 +10,6 @@ const Card = (props) => {
         {!!title && <span className="card-title">{title}</span>}
         {children}
       </div>
-      <div className="card-actions">
-        <a href="#">Link</a>
-      </div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Card from "./Card";
 import CardPanel from "./CardPanel";
 import Footer from "./Footer";
 import Icon from "./Icon";
-import ImageCard from "./ImageCard";
+import MediaCard from "./MediaCard";
 import Loading from "./Loading";
 import Media from "./Media";
 import ParallaxStars from "./ParallaxStars";
@@ -12,6 +12,10 @@ import RevealCard from "./RevealCard";
 import ScrollToTop from "./ScrollToTop";
 import UserProfile from "./UserProfile";
 import SlickSlider from "./SlickSlider";
+import NetworkStatus from "./NetworkStatus";
+import Collapsible from "./Collapsible";
+import SectionTitle from "./SectionTitle";
+import Tile from "./Tile";
 
 export {
   Banner,
@@ -20,12 +24,16 @@ export {
   CardPanel,
   Footer,
   Icon,
-  ImageCard,
+  MediaCard,
   Loading,
   Media,
   ParallaxStars,
   RevealCard,
   ScrollToTop,
   UserProfile,
-  SlickSlider
+  SlickSlider,
+  NetworkStatus,
+  Collapsible,
+  SectionTitle,
+  Tile
 };

@@ -53,6 +53,10 @@ $shadows-big: multiple-box-shadow(100);
   }
 }
 
+.stars {
+  position: fixed;
+}
+
 #stars {
   width: 1px;
   height: 1px;

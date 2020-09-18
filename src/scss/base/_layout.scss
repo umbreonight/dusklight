@@ -7,3 +7,28 @@
     margin: 0;
   }
 }
+
+.button-group {
+  display: grid;
+  grid-gap: $grid-gutter;
+  grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+
+  .fill {
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  }
+}
+
+.section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &.no-padding {
+    padding: 0;
+  }
+  &.no-padding-bot {
+    padding-bottom: 0;
+  }
+  &.no-padding-top {
+    padding-top: 0;
+  }
+}
