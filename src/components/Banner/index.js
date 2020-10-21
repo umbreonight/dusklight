@@ -1,8 +1,7 @@
 import React from "react";
 
-const Banner = props => {
-
-  let { title, className, image, body} = props;
+const Banner = (props) => {
+  let { title, className, subtitle, image, body } = props;
 
   return (
     <div className={"banner " + (!!className ? className : "")}>
@@ -10,7 +9,10 @@ const Banner = props => {
         <img className="responsive" src={image} alt=""></img>
       </div>
       <div className="banner-content container">
-        <h1 className="banner-title">{title}</h1>
+        <h1 className="banner-title">
+          {title}
+          {!!subtitle && <small className="banner-subtitle">{subtitle}</small>}
+        </h1>
         {body && <p className="feature">{body}</p>}
       </div>
     </div>

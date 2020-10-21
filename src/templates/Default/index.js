@@ -9,6 +9,7 @@ const Default = ({children}) => {
         <ScrollToTop />
         <main>{children}</main>
       </Router>
+      <Footer/>
     </Fragment>
   );
 };

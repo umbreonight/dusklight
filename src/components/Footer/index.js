@@ -6,10 +6,9 @@ const Footer = (props) => {
     <footer className="footer">
       <div className="footer-links">
         <a href="/">Home</a>
-        <a href="/library">Library</a>
-        <a href="/workbench">Workbench</a>
+        <a href="/components">Components</a>
       </div>
-      <div className="footer-copyright">© Copyright 2020</div>
+      <div className="footer-copyright">Darren van Reenen | 2020</div>
     </footer>
   );
 };

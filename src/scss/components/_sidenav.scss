@@ -1,0 +1,83 @@
+$sidenav-bg: lighten($gray-300, 20);
+$sidenav-color: $text-color;
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: calc(-100% - 56px);
+  width: calc(100% - 56px);
+  background-color: $sidenav-bg;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+  z-index: z-index(navigation, sidenav);
+  color: $sidenav-color;
+
+  .sidenav-header {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 1rem;
+
+    text-align: center;
+
+    align-items: center;
+
+    height: 56px;
+
+    .icon {
+      color: $sidenav-color;
+    }
+  }
+
+  .sidenav-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      position: relative;
+      font-family: "Rubik", sans-serif;
+
+      a {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0 2rem;
+        text-decoration: none;
+        min-height: 48px;
+        line-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        color: $text-color;
+
+        &.is-active {
+          background-color: $primary-color-dark;
+          color: mix($primary-color-dark, white, 0);
+        }
+
+        .icon.left {
+          margin-right: 2rem;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  @include sm() {
+    left: -250px;
+    width: 250px;
+  }
+
+  &.is-open {
+    left: 0px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.275);
+    opacity: 1;
+  }
+}

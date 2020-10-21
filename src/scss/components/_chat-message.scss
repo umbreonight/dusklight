@@ -1,0 +1,50 @@
+.chat-message {
+  display: grid;
+  grid-column-gap: $grid-gutter / 2;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 40px 1fr;
+  align-items: start;
+  margin: 1rem 0;
+
+  &.flipped {
+    grid-template-columns: 1fr 40px;
+    grid-auto-flow: column;
+
+    .user-avatar {
+      grid-column-start: 2;
+    }
+  }
+
+  .user-avatar {
+    /* set span to (at a minimum) the max # of
+      grid items to appear next to the img */
+    grid-column-start: 1;
+
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 100%;
+  }
+
+  .message-body {
+    grid-row: span 2;
+    padding: 1rem;
+    background-color: $gray-400;
+    border-radius: 0.5rem;
+
+    * {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    p {
+      max-width: none;
+    }
+
+    .media {
+      margin: 1.25rem 0;
+    }
+  }
+}

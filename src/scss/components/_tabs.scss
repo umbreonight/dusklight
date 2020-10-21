@@ -1,0 +1,26 @@
+.tabs {
+  .tab-list {
+    display: flex;
+    margin-top: 0;
+    .tab {
+      flex-grow: 1;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      transition: all 0.5s;
+      border-bottom: 2px solid $text-color;
+      font-weight: bold;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &.active {
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+}

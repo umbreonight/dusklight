@@ -5,7 +5,7 @@
 // Shared styles
 $button-border: none !default;
 $button-font-size: $base-font-size !default;
-$button-icon-font-size: 1.3rem !default;
+$button-icon-font-size: 1.5rem !default;
 $button-height: 40px !default;
 $button-padding: 0 16px !default;
 $button-border-radius: 4px !default;
@@ -48,7 +48,7 @@ $button-round-large-size: 56px !default;
 // Small buttons
 $button-small-font-size: 12px !default;
 $button-small-icon-font-size: 1.2rem !default;
-$button-small-height: $button-height * 0.9 !default;
+$button-small-height: $button-height * 0.8 !default;
 $button-round-small-size: $button-height * 0.9 !default;
 $button-small-padding: 0 spacer(sm);
 
@@ -101,6 +101,11 @@ $button-round-radius: 50% !default;
   &.small {
     font-size: $button-small-font-size;
     height: $button-small-height;
+    min-height: $button-small-height;
+
+    .icon {
+      font-size: $button-small-icon-font-size;
+    }
   }
 
   &.round {
@@ -113,6 +118,8 @@ $button-round-radius: 50% !default;
   }
 
   & .icon {
+    font-size: $button-icon-font-size;
+    
     &.left {
       order: -1;
     }
@@ -199,6 +206,95 @@ $button-round-radius: 50% !default;
       cursor: default;
       pointer-events: none;
       border: none;
+    }
+  }
+}
+
+.floating-action-button {
+  @extend %button-base;
+  background: $button-fixed-background;
+  border-radius: $button-fixed-radius;
+  bottom: $button-fixed-gap;
+  height: $button-fixed-size;
+  line-height: $button-fixed-size;
+  overflow: hidden;
+  position: fixed;
+  right: $button-fixed-gap;
+  width: $button-fixed-size;
+  z-index: 100;
+  margin: 0;
+  @include box-shadow(2);
+
+  @include sm() {
+    display: none !important;
+  }
+
+  &.left {
+    left: $button-fixed-gap;
+  }
+
+  &.center {
+    left: calc(50% - (#{$button-fixed-size} / 2));
+    right: calc(50% - (#{$button-fixed-size} / 2));
+  }
+
+  & ~ main {
+    padding-bottom: 90px;
+  }
+}
+
+
+.dropdown-button {
+  padding-right: 40px;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    width: 0%;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+  }
+
+  & + .dropdown-content {
+    display: none;
+
+    position: absolute;
+    @include box-shadow(1);
+    border-radius: 4px;
+    padding: 0;
+    min-width: 150px;
+    width: max-content;
+    margin: 0;
+    background-color: $primary-color;
+    overflow: hidden;
+
+    & > li {
+      margin: 0;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      
+      a {
+        color: white;
+        display: block;
+      }
+    }
+
+    hr {
+      margin: 5px 0;
+    }
+  }
+
+  &.is-open {
+    &:after {
+      border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 0;
+    border-bottom: 5px solid white;
+    }
+    & + .dropdown-content {
+      display: block;
     }
   }
 }

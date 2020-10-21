@@ -2,13 +2,10 @@ import React, { Fragment } from "react";
 import {
   Loading,
   Banner,
+  LoginForm,
   Card,
-  UserProfile,
-  ParallaxStars,
-  MediaCard,
-  Collapsible,
-  SectionTitle,
-  Button
+  FloatingActionButton,
+  FlipCard
 } from "@components";
 
 const Home = (props) => {
@@ -20,42 +17,37 @@ const Home = (props) => {
 
   return (
     <Fragment>
-      <ParallaxStars title="dusklight" fixed/>
+      <FloatingActionButton icon="search" />
+      <Banner
+        title="Dusklight UI"
+        subtitle="React and SCSS Front End UI Kit"
+        image="/static/images/dark-souls.jpg"
+      />
       <div className="container">
         <div className="row">
-          <div className="col-12 col-sm-8">
-            <SectionTitle title="Components" />
-            <div className="button-group">
-              <Button text="Button" />
-              <Button text="add" icon="add" className="round"/>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4">
-            <Collapsible title="About">
-            <Card>
-              <UserProfile
-                username="Darren van Reenen"
-                subtitle="Front End UI Developer"
-                image="/static/images/bloodborne.jpeg"
-              />
+          <div className="col-12 col-sm-6">
+            <Card title="Dusklight UI">
+              <p>
+                Aliqua exercitation excepteur nisi reprehenderit duis velit.
+                Laborum est non fugiat ex ea mollit laboris reprehenderit anim.
+                Non anim adipisicing nulla est nisi. Reprehenderit et sunt
+                adipisicing eu quis fugiat esse aliqua minim qui velit elit
+                excepteur. Non ullamco eiusmod minim excepteur eu laborum ut qui
+                voluptate.
+              </p>
             </Card>
-            </Collapsible>
-            
-            <MediaCard video="/static/videos/godfall.mp4" title="Godfall">
+          </div>
+          <div className="col-12 col-sm-6">
+            <Card title="React and SCSS">
               <p>
-                Anim sit eiusmod ut ea quis consectetur non adipisicing
-                incididunt culpa dolor ex. Sunt sunt do deserunt eu laborum id.
-                Cupidatat dolor eu deserunt ad veniam.
+                Aliqua exercitation excepteur nisi reprehenderit duis velit.
+                Laborum est non fugiat ex ea mollit laboris reprehenderit anim.
+                Non anim adipisicing nulla est nisi. Reprehenderit et sunt
+                adipisicing eu quis fugiat esse aliqua minim qui velit elit
+                excepteur. Non ullamco eiusmod minim excepteur eu laborum ut qui
+                voluptate.
               </p>
-            </MediaCard>
-            <MediaCard image="/static/images/dark-souls-3.jpg" title="Dark Souls">
-              <p>
-                Anim sit eiusmod ut ea quis consectetur non adipisicing
-                incididunt culpa dolor ex. Sunt sunt do deserunt eu laborum id.
-                Cupidatat dolor eu deserunt ad veniam. Esse eiusmod id fugiat
-                sit pariatur magna in Lorem proident sint.
-              </p>
-            </MediaCard>
+            </Card>
           </div>
         </div>
       </div>

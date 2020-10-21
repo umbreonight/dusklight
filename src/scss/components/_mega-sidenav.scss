@@ -1,0 +1,153 @@
+$black: #252525;
+$white: #fff;
+$grey: #eaeaea;
+
+$primary-color-dark: darken($primary-color, 10%);
+$primary-color-tint-1: lighten($primary-color, 10%);
+$primary-color-tint-2: lighten($primary-color, 20%);
+$primary-color-tint-3: lighten($primary-color, 30%);
+$primary-color-tint-4: lighten($primary-color, 40%);
+$primary-color-tint-5: lighten($primary-color, 50%);
+$primary-font: $font-family-base;
+
+$link-color: $white;
+
+$nav-width: calc(100% - 4rem);
+$nav-padding: 1rem 1.5rem;
+$nav-border-color: $primary-color-tint-5;
+$nav-background-color: $gray-200;
+$nav-icon-font: "Material Icons";
+$nav-icon-arrow-right: "chevron_right";
+$nav-icon-arrow-left: "chevron_left";
+
+$nav-level-border-color: $primary-color;
+$nav-level-background-color: $gray-200;
+
+$nav-level3-background-color: $gray-200;
+$nav-level4-background-color: $gray-200;
+$nav-level5-background-color: $gray-200;
+
+.mega-sidenav {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: calc(-100% - 56px);
+  width: calc(100% - 56px);
+  background-color: $sidenav-bg;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+  z-index: z-index(navigation, sidenav);
+  color: $sidenav-color;
+
+  .sidenav-header {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 1rem;
+
+    text-align: center;
+
+    align-items: center;
+
+    height: 56px;
+  }
+
+  .sidenav-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    li {
+      display: block;
+      font-family: "Rubik", sans-serif;
+      margin: 0;
+
+      a {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0 2rem;
+        text-decoration: none;
+        min-height: 48px;
+        line-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        color: $text-color;
+
+        &.is-active {
+          background-color: $primary-color-dark;
+        }
+
+        .icon.left {
+          margin-right: 2rem;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  &.is-open {
+    left: 0px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.275);
+    opacity: 1;
+  }
+
+  .nav-expand {
+    &.is-active {
+      > .nav-expand-content {
+        transform: translateX(0);
+        visibility: visible;
+      }
+    }
+  }
+
+  .nav-link {
+    background-color: $sidenav-bg;
+  }
+
+  .nav-expand-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      @extend .icon;
+      content: $nav-icon-arrow-right;
+      flex: 0 1 auto;
+      font-family: $nav-icon-font;
+    }
+  }
+
+  .nav-expand-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 100%;
+    transform: translateX(100%);
+    background-color: $sidenav-bg;
+    transition: 0.3s;
+    visibility: hidden;
+    z-index: +1;
+
+    .nav-back-link {
+      display: flex;
+      align-items: center;
+      color: $white;
+  
+      &::before {
+        @extend .icon;
+        content: $nav-icon-arrow-left;
+        margin-right: 0.5em;
+        font-family: $nav-icon-font;
+      }
+    }
+  }
+}

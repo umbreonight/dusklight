@@ -12,6 +12,29 @@ $card-title-font-size-small: 1.25rem;
   margin: $element-top-margin 0 $element-bottom-margin 0;
   padding: $card-padding;
   transition: box-shadow 0.25s;
+
+  &.neumorphic-flat {
+    border-radius: $base-border-radius-large;
+    background: #efefef;
+    box-shadow: 20px 20px 60px #cbcbcb, -20px -20px 60px #ffffff;
+  }
+
+  &.neumorphic-concave {
+    background: linear-gradient(145deg, #d7d7d7, #ffffff);
+    box-shadow: 20px 20px 60px #cbcbcb, -20px -20px 60px #ffffff;
+  }
+
+  &.neumorphic-convex {
+    border-radius: $base-border-radius-large;
+    background: linear-gradient(145deg, #ffffff, #d7d7d7);
+    box-shadow: 20px 20px 60px #cbcbcb, -20px -20px 60px #ffffff;
+  }
+
+  &.neumorphic-pressed {
+    border-radius: $base-border-radius-large;
+    background: #efefef;
+    box-shadow: inset 20px 20px 60px #cbcbcb, inset -20px -20px 60px #ffffff;
+  }
 }
 
 .card {
@@ -31,6 +54,8 @@ $card-title-font-size-small: 1.25rem;
     display: flex;
     font-size: $card-title-font-size-small;
     font-weight: 300;
+    font-weight: bold;
+
 
     @include sm() {
       font-size: $card-title-font-size;
@@ -80,11 +105,11 @@ $card-title-font-size-small: 1.25rem;
       display: flex;
       line-height: 2rem;
       margin-bottom: 8px;
+      font-weight: bold;
 
       i {
         line-height: 2rem;
-      cursor: pointer;
-
+        cursor: pointer;
       }
     }
   }
@@ -118,7 +143,7 @@ $card-title-font-size-small: 1.25rem;
     height: 100%;
     z-index: 3;
     opacity: 0;
-    transition: all .25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 
     .card-title {
       cursor: pointer;
@@ -128,6 +153,18 @@ $card-title-font-size-small: 1.25rem;
     &.is-shown {
       transform: translateY(-100%);
       opacity: 1;
+    }
+  }
+
+  // Sticky Action on RevealCard
+  &.sticky-action {
+    .card-actions {
+      z-index: 2;
+    }
+
+    .card-reveal {
+      z-index: 1;
+      padding-bottom: 58px;
     }
   }
 }

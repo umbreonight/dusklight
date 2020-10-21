@@ -18,6 +18,12 @@
     }
   }
 
+  &.rounded {
+    .media-asset {
+      border-radius: 100%;
+    }
+  }
+
   &.large {
     grid-template-columns: 150px 1fr;
     grid-template-rows: 150px 1fr;

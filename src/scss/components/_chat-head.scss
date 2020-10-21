@@ -1,0 +1,46 @@
+.chat-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 0;
+
+  .user {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    gap: 1rem;
+    align-items: center;
+    flex-grow: 1;
+
+    .user-image {
+      height: 65px;
+      width: 65px;
+      border-radius: 100%;
+      object-fit: cover;
+      object-position: center;
+      margin-right: 1rem;
+    }
+
+    .chat-head-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .chat-head-user {
+      font-size: 13px;
+      line-height: 23px;
+
+      text-transform: uppercase;
+
+      font-family: $font-family-heading;
+    }
+
+    .chat-head-subtitle {
+      font-size: 12px;
+      line-height: 16px;
+      width: 100%;
+      @include line-clamp(1);
+    }
+  }
+}
